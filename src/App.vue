@@ -1,5 +1,5 @@
 <template>
-  <HeaderExpense :totalIncome="state.totalExpense"/>
+  <HeaderExpense :totalExpense="state.totalExpense"/>
 </template>
 
 <script>
@@ -9,7 +9,13 @@ import HeaderExpense from "./components/HeaderExpense.vue";
 export default {
     setup() {
         const state = reactive({
-            expense: [],
+            expense: [{
+                value: 400
+            },
+            {
+                value: 500
+            }
+            ],
             totalExpense: computed(() => {
                 let temp = 0;
                 if (state.expense.length > 0) {
