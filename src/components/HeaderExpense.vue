@@ -1,12 +1,15 @@
 <template>
   <header>
       <h1>Expense Tracker</h1>
-      <div class="total-expense">$0</div>
+      <div class="total-expense">${{ totalExpense }}</div>
   </header>
 </template>
 
 <script>
 export default {
+    props: {
+        totalExpense: Number
+    }
 
 }
 </script>
