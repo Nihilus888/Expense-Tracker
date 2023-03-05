@@ -14,6 +14,9 @@ export default {
             },
             {
                 value: 500
+            },
+            {
+                value: 100
             }
             ],
             totalExpense: computed(() => {
@@ -28,7 +31,7 @@ export default {
         });
         return {
             HeaderExpense,
-            state
+            state,
         };
     },
     components: { HeaderExpense }
